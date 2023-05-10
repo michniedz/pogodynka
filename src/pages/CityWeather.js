@@ -12,7 +12,7 @@ const CityWeather = () => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric`)
             .then(res => res.json())
             .then(re => setWeather(re));
-    },[]);
+    });
 
     useEffect(()=>{
         if(weather){
@@ -20,7 +20,7 @@ const CityWeather = () => {
                 .then(res => res.json())
                 .then(re => setImage(re.hits[0].largeImageURL));
         }
-    },[weather]);
+    });
     
     return (
         <>
@@ -32,7 +32,7 @@ const CityWeather = () => {
                     <li>Ciśnienie: {weather.main.pressure}</li>
                 </ul>
             }
-            {image && <img src={image} />}
+            {image && <img src={image} alt={image} />}
         </>
     );
 };

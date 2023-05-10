@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -23,6 +22,5 @@ const Home = () => {
         </form>
     );
 };
-//9d12b81d26aa556a546c41a5f39eac00
-//https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
+
 export default Home;
